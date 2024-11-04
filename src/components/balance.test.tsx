@@ -28,7 +28,7 @@ describe('Budget Balance Verification', () => {
     expect(getByText(`Remaining: $${remainingBalance}`)).toBeInTheDocument();
 
     // Assert Total Expenses is displayed correctly
-    expect(getByText(`Spent so far: $${totalExpenses}`)).toBe(null); //this should be .toBeInTheDocument();
+    expect(getByText(`Spent so far: $${totalExpenses}`)).toBeInTheDocument(); //this should be .toBeInTheDocument();
 
     // Assert Budget equals Remaining + Spent
     expect(remainingBalance + totalExpenses).toEqual(budget);
